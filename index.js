@@ -1,21 +1,58 @@
 
-function multiplicacion(numeroUno, numeroDos) {
-    let resultado = numeroUno * numeroDos;
+
+let producto = [
+    {
+        nombre: 'Vinilo',
+        precio: 1200
+    },
+    {
+        nombre: 'Lona Front',
+        precio: 1150
+    },
+    {
+        nombre: 'lona Back',
+        precio: 1500
+    },
+    {
+        nombre: 'Lona Bo',
+        precio: 1200
+    },
+    {
+        nombre: 'Termotransferible',
+        precio: 3800
+    }
+]
+
+function multiplicacion(producto, precio) {
+    let resultado = producto * precio;
     return resultado;
 }
 
 
+function crearMensaje() {
+    let mensaje = 'Que producto desea comprar?'
+    let count = 1
+    for (let producto of productos) {
+        mensaje += `\n${count}. ${producto.nombre} - $ ${producto.precio}`
+        count++
+    }
 
-function mostrarResultado(resultado) {
-    alert("Cantidad de mt2:  " + resultado);
+    mensaje += `\n${count}. Salir`
+
+    return mensaje
 }
 
-function mostrarMenu() {
-    let opcion = prompt(
-        "Bienvenido a Zona CMYK, seleccione la opcion (ESC para salir)\n1. Vinilo\n2. Lona Front\n3. Lona BO \n4. Lona Back "
-    );
-    return opcion;
+function cantidad(producto) {
+    let(`ancho ${producto.nombre} * ${producto.precio} alto,`)
+
 }
+
+function subtotal(cantidad, producto) {
+    alert(`${producto.nombre} por $ ${cantidad * producto.precio}`)
+    return cantidad * producto.precio
+}
+
+
 
 function MetrosCuadrados() {
     let opcionSeleccionada = mostrarMenu();
@@ -50,3 +87,4 @@ function MetrosCuadrados() {
 }
 
 MetrosCuadrados();
+
